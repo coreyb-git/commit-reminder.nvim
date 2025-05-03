@@ -4,7 +4,7 @@ Lazy plugin:
 
 ```
 return {
-	"coreyb-git/commitreminder.nvim",
+	"coreyb-git/commit-reminder.nvim",
 	dependencies = {
 		"rcarriga/nvim-notify",
 	},
