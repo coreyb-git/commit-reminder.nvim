@@ -1,4 +1,4 @@
-local config = require("commitreminder.config")
+local config = require("commit-reminder.config")
 
 local M = {}
 
