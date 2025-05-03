@@ -1,7 +1,13 @@
+local config = require("commitreminder.config")
+
 local M = {}
 
 function M.setup(opts)
-	if opts.enabled then
+	for i, v in pairs(opts) do
+		config[i] = v
+	end
+
+	if config.enabled then
 		local format = "medium"
 		local s = "git log -1 --date=relative --format=" .. format
 		local handle = io.popen(s)
