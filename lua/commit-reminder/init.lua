@@ -8,11 +8,11 @@ function M.setup(opts)
 	end
 
 	if config.enabled then
+		vim.notify = require("notify")
+
 		local format = "medium"
 		local s = "git log -1 --date=relative --format=" .. format
 		local handle = io.popen(s)
-		require("notify")
-		vim.notify = require("notify")
 		local notifyopts = { title = "Last Commit Reminder", timeout = 5000 }
 		if handle ~= nil then
 			local result = handle:read("*a")
